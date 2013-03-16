@@ -1,0 +1,296 @@
+% \documentclass[10pt,a4paper]{report}
+% \pagestyle{plain}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{scopes}
+
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+%\usepackage[swedish]{babel}
+
+\usepackage[style=authoryear]{biblatex}
+%\addbibresource{test}
+\usepackage{graphics} % Required to insert images
+
+\usepackage{multicol}
+
+ \usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+
+\hypersetup{
+    colorlinks, urlcolor={dark-red},
+    citecolor={dark-blue},linkcolor={medium-blue}
+}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+%\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+%\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center head
+%\chead{\hmwkClass\ : \hmwkTitle} % Top center head
+\rhead{\hmwkClass\ : \hmwkTitle}
+%\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Uppgift 4.28} % Assignment titlee
+\newcommand{\hmwkClass}{TATA41/42} % Course/class
+%\newcommand{\hmwkClassTime}{10:30am} % Class/lecture time
+%\newcommand{\hmwkClassInstructor}{Jones} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Janne Väisänen} % Your name
+
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+\usepackage{graphicx}
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+\section*{Lösning kapitel 6}
+\subsection*{Uppgift 6.1}
+Beräkna $ \int_{-2}^7 \Phi(x)dx$ av funktionen
+
+
+%\begin{equation}
+\[
+\Phi(x)= \begin{cases} 
+	3, & \mbox{då } -2 \leq x < 2 \mbox{} \\
+	15, & \mbox{då } x = 2\mbox{} \\	
+	-5, & \mbox{då } 2 < x < 5 \mbox{} \\	
+	-1, & \mbox{då } 5 \leq x \leq 7 \mbox{} \\	
+	
+\end{cases}
+\]
+%\end{equation}
+Lösnning
+\[
+\int_{-2}^7 \Phi(x)dx = 3(2+2) + 0 -5(5-2)-1(7-5)\\
+					 = 12-15-2=-5
+\]
+
+\subsection*{Uppgift 6.2}
+Låt $f(x) = 3-2x, 0\leq x \leq 1$\\[0.5cm]
+\subsubsection*{a)}
+ Dela intervallet $[0,1]$ i 5 lika långa delintervall. Låt därefter $\Phi_5$ och $\Psi_5$ var lämpliga under respektive övertrappor som är konstanta på dessa delinterval. Beräkna $ \int_0^1 \Phi(x)dx$ och $ \int_0^1 \Psi(x)dx$\\
+
+Lösning \\
+
+En sådan indeling ger gränspunkter $\frac{1}{5}, \frac{2}{5} , \frac{3}{5}, \frac{4}{5}, \frac{5}{5} $
+
+
+\[
+\Phi_5(x)= \begin{cases} 
+	\frac{13}{5}, & \mbox{då } 0 \leq x \leq \frac{1}{5} \mbox{} \\
+	\frac{11}{5}, & \mbox{då } \frac{1}{5} < x \leq \frac{2}{5} \mbox{} \\	
+	\frac{9}{5}, & \mbox{då } \frac{2}{5} < x \leq \frac{3}{5}  \mbox{} \\	
+	\frac{7}{5}, &\mbox{då } \frac{3}{5} < x \leq \frac{4}{5} \mbox{} \\	
+	\frac{5}{5}, & \mbox{då } \frac{4}{5} < x \leq \frac{5}{5} \mbox{} \\	
+\end{cases}
+\]
+
+%\begin{equation}
+\[
+\Psi_5(x)= \begin{cases} 
+	\frac{15}{5}, & \mbox{då } 0 \leq x < \frac{1}{5} \\
+	\frac{13}{5}, & \mbox{då } \frac{1}{5} \leq x < \frac{2}{5}\\	
+	\frac{11}{5}, & \mbox{då } \frac{2}{5} \le x < \frac{3}{5}\\	
+	\frac{9}{5}, &\mbox{då } \frac{3}{5} \leq x < \frac{4}{5}\\	
+	\frac{7}{5}, & \mbox{då } \frac{4}{5} \leq x \leq \frac{5}{5}\\	
+\end{cases}
+\]
+%\end{equation}
+\[ 
+\begin{split}
+ \int_0^1 \Phi_5(x)dx = \frac{13}{5}\Bigg(\frac{1 - 0}{5}\Bigg)+  
+ 					\frac{11}{5}\Bigg(\frac{2 - 1}{5}\Bigg)+ 
+ 					\frac{9}{5}\Bigg(\frac{3 - 2}{5}\Bigg)+ 
+ 					\frac{7}{5}\Bigg(\frac{4 - 3}{5}\Bigg)+ 
+ 					\frac{5}{5}\Bigg(\frac{5 - 4}{5}\Bigg) = \\
+ 					\frac{1}{5} \Bigg(\frac{13+11+9+7+5}{5}\Bigg)= \frac{9}{5} \\		
+\end{split}
+\]
+\[
+\begin{split}
+\int_0^1 \Psi_5(x)dx = \frac{15}{5}\Bigg(\frac{1 - 0}{5}\Bigg)+  
+ 					\frac{13}{5}\Bigg(\frac{2 - 1}{5}\Bigg)+ 
+ 					\frac{11}{5}\Bigg(\frac{3 - 2}{5}\Bigg)+ 
+ 					\frac{9}{5}\Bigg(\frac{4 - 3}{5}\Bigg)+ 
+ 					\frac{7}{5}\Bigg(\frac{5 - 4}{5}\Bigg) = \\
+ 					\frac{1}{5} \Bigg(\frac{15+13+11+9+7}{5}\Bigg)= \frac{11}{5} \\		
+\end{split}
+\]
+Notera att de båda ovan är aritmetiska summor och kan lösas med formeln för sådana.
+
+\subsubsection*{b)}
+Samma som i uppgift a men dela in i 10 intervall
+Lösning \\
+
+En sådan indeling ger gränspunkter $\frac{1}{10}, \frac{2}{10} \ldots \frac{9}{10}, \frac{10}{10}$
+och alltså följande trappfunktioner
+
+\[
+\Phi_{10} (x)= \begin{cases} 
+	3 - \Big(\frac{2}{10}\Big) & \mbox{då }  0 \leq x \leq \frac{1}{10}  \\
+	3 - \Big(\frac{4}{10}\Big) & \mbox{då } \frac{1}{10} < x \leq \frac{2}{10}  \\
+	\vdots \\
+	3 - \Big(\frac{20}{10}\Big) & \mbox{då } \frac{9}{10} < x \leq \frac{10}{10}  \\
+\end{cases}
+\]
+
+%\begin{equation}
+%\end{equation}
+\[
+\Psi_{10}(x)= \begin{cases} 
+	3 - 0, & \mbox{då } 0 \leq x < \frac{1}{10}  \\
+	3 - \Big(\frac{2}{10}\Big) & \mbox{då } \frac{2}{10}  \leq x < \frac{2}{10}  \\
+	\vdots \\
+	3 - \Big(\frac{18}{10}\Big) & \mbox{då } \frac{9}{10}  \leq x \leq \frac{10}{10}  \\
+\end{cases}
+\]
+
+\[ 
+\begin{split}
+\int_0^1 \Phi_{10}(x)dx = \frac{1}{10}\Bigg(\frac{28}{10}\Bigg)+ \ldots  +
+ 					\frac{1}{10}\Bigg(\frac{10}{10}\Bigg)= 
+ 					\frac{1}{10} \Bigg(\frac{28 + \ldots + 10}{10}\Bigg)= \\
+ 					\mbox{/aritmetisk summa /} =  
+ 					10\left(\frac{1}{10} \left(\frac{10+28}{ 2*10}\right)\right)=\frac{19}{10}\\		
+\end{split}
+\]
+\[
+\begin{split} 
+ \int_0^1 \Psi_{10}(x)dx = \frac{1}{10}\Bigg(\frac{30}{10}\Bigg)+ \ldots + 
+ 					\frac{1}{10}\Bigg(\frac{12}{10}\Bigg)= 
+ 					\frac{1}{10} \Bigg(\frac{30 + \ldots + 12}{10}\Bigg)=\\ 
+ 					\mbox{/aritmetisk summa /} =  
+ 					10\bigg(\frac{1}{10} \bigg(\frac{30+ 12}{ 2*10}\bigg)\bigg)=\frac{21}{10}\\		
+\end{split}
+\]
+
+\subsubsection*{c)}
+
+Samma som i uppgift b men dela in i n intervall
+Lösning \\
+
+En sådan indeling ger gränspunkter $\frac{1}{n}, \frac{2}{n} \ldots \frac{n-1}{n}, \frac{n}{n}$
+och alltså följande trappfunktioner
+
+\[
+\Phi_{n} (x)= \begin{cases} 
+	3 - \Big(\frac{2}{n}\Big) & \mbox{då }  0 \leq x \leq \frac{1}{n}  \\
+	3 - \Big(\frac{4}{n}\Big) & \mbox{då } \frac{1}{n} < x \leq \frac{2}{n}  \\
+	\vdots \\
+	3 - 2 *\Big(\frac{n}{n}\Big) & \mbox{då } \frac{n-1}{n} < x \leq \frac{n}{n}  \\
+\end{cases}
+\]
+
+%\begin{equation}
+%\end{equation}
+\[
+\Psi_{n}(x)= \begin{cases} 
+	3 - 0, & \mbox{då } 0 \leq x < \frac{1}{n}  \\
+	3 - \Big(\frac{2}{n}\Big) & \mbox{då } \frac{2}{n}  \leq x < \frac{2}{n}  \\
+	\vdots \\
+	3 - \Big(\frac{n-8}{n}\Big) & \mbox{då } \frac{n-1}{n}  \leq x \leq \frac{n}{n}  \\
+\end{cases}
+\]
+
+\[ 
+\begin{split}
+\int_0^1 \Phi_{n}(x)dx = \left(3- \frac{2}{n}\right)\left( \frac{1}{n} - 0\right)+ \ldots  +
+						\left(3- 2\right)\left( \frac{n}{n} - \frac{n-1}{n}\right)=\\						
+						\left(3- \frac{2}{n}\right)\left( \frac{1}{n}\right)+ \ldots  +
+						 \frac{1}{n}= \frac{1}{n}\left(3-\frac{2}{n}+\ldots+ 1 \right)=\\
+						 /\mbox{Aritmetisk summa}/=
+						  \frac{1}{n} \left(\frac{n \left(3- \frac{2}{n} +1\right) }{2}\right)=\\
+						 \left(\frac{3n - 2 + n}{2n}\right)= \frac{4n-2}{2n} = 2-\frac{1}{n}
+\end{split}
+\]
+
+\[
+\begin{split}
+\int_0^1 \Psi_{n}(x)dx = 3\left(\frac{1}{n}\right)+ \ldots  +
+						\left(3- \frac{2(n-1)}{n} \right) \left(\frac{1}{n}\right)=\\			
+						\frac{1}{n}\left(3 +\ldots + \frac{3n-2n+2}{n}\right)= 
+						\mbox{ /aritmetisk summa/ }= \\
+						\frac{1}{n} \left(n \left( 3 + \frac{n+2}{2n} \right)\right)= 
+						\frac{4n+2}{2n}=2+\frac{1}{n}
+						\end{split}
+\]
+
+
+\subsubsection*{d)} Använd c) för att beräkna $ \int_0^1(3-2x)dx $
+\[
+	2-\frac{1}{n} \leq \int_0^1(3-2x)dx \leq 2 + \frac{1}{n}
+\]
+Om vi låter $n \rightarrow \infty $ ser vi 
+\[
+	2-\frac{1}{\infty} \leq \int_0^1(3-2x)dx \leq 2 + \frac{1}{\infty}
+\]
+Vi drar slutsatsen
+\[
+	\int_0^1(3-2x)dx = 2
+\]
+\subsection*{Uppgift 6.8}
+\subsubsection*{D)}
+Beräkna $ \int_0^2 |x^2-x|dx$ \\
+Problemet här är absolutbeloppet. Vi noterar \\
+\[ |x^2-x|=|x(x-1)| = \mbox{ / 0 leq x leq 2/ } = x|x-1| \]
+dvs.
+\[
+|x^2-x|=\begin{cases} 
+	-(x^2-x) & \mbox{då } 0 \leq x \leq 1 \\
+	 (x^2-x) & \mbox{då } 1 \leq x \leq 2 \\
+\end{cases}
+\]
+Vi kan då använda räknelagen $ \int_a^cf(x)dx=\int_a^bf(x)dx + \int_b^cf(x)dx$
+och dela upp  problemet i intervallen $[0,1]$ samt $[1,2]$. Vi får då.
+\[
+\begin{split}
+\int_0^2 |x^2-x|dx = -\int_0^1|x^2-x|dx  + \int_1^2 |x^2-x|dx =\\
+ /\int(x^2-x)dx = \frac{1}{3}x^3 - \frac{1}{2}x^2 /=/\mbox{Insättningsformeln}/=\\
+ -\left[\frac{1}{3}x^3 - \frac{1}{2}x^2 \right]_0^1 +\left[\frac{1}{3}x^3 - \frac{1}{2}x^2 \right]_0^1 =\\
+ -\left(\frac{1}{3}-\frac{1}{2}\right)+\frac{8}{3}-\frac{4}{2}-\left(\frac{1}{3}-\frac{1}{2}\right)=\frac{6}{3}-\frac{2}{2}= 2-1= 1
+\end{split}
+\]
+
+\end{document}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax Test Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script type="text/javascript" src="./MathJax.js"></script>
+
+<style>
+h1 {text-align:center}
+h2 {
+  font-weight: bold;
+  background-color: #DDDDDD;
+  padding: .2em .5em;
+  margin-top: 1.5em;
+  border-top: 3px solid #666666;
+  border-bottom: 2px solid #999999;
+  
+}
+.sideByside{
+ margin:auto;
+ clear:both;
+width:75%;
+}
+
+.casesSideLeft{
+margin:auto;
+float:left;
+padding:10px;
+}
+.casesSideRight{
+margin:auto;
+float:left;
+padding:10px
+}
+#pagewrap
+{
+margin:auto;
+width:960px;
+}
+</style>
+</head>
+
+<body>
+<div id="pagewrap">
+<noscript>
+<div style="color:#CC0000; text-align:center">
+<b>Warning: <a href="http://www.mathjax.org/">MathJax</a>
+requires JavaScript to process the mathematics on this page.<br />
+If your browser supports JavaScript, be sure it is enabled.</b>
+</div>
+<hr>
+</noscript>
+
+<h1>Analys en variabel test av Mathjax</h1>
+
+<blockquote>
+
+<h2>Uppgift 6.1</h2>
+<p>
+Beräkna $ \int_{-2}^7 \Phi(x)dx$ av funktionen
+\[
+\Phi(x)= \begin{cases} 
+	3, & \mbox{då } -2 \leq x < 2 \mbox{} \\
+	15, & \mbox{då } x = 2\mbox{} \\	
+	-5, & \mbox{då } 2 < x < 5 \mbox{} \\	
+	-1, & \mbox{då } 5 \leq x \leq 7 \mbox{} \\	
+	
+\end{cases}
+\]
+
+Lösnning
+\[
+\int_{-2}^7 \Phi(x)dx = 3(2+2) + 0 -5(5-2)-1(7-5)\\
+					 = 12-15-2=-5
+\]
+
+</p>
+
+<h2>uppgift 6.2 A</h2>
+<p>
+
+Låt $f(x) = 3-2x, 0\leq x \leq 1$ <br/>
+a)
+ Dela intervallet $[0,1]$ i 5 lika långa delintervall. Låt därefter $\Phi_5$ och $\Psi_5$ var lämpliga under respektive övertrappor som är konstanta på dessa delinterval. Beräkna $ \int_0^1 \Phi(x)dx$ och $ \int_0^1 \Psi(x)dx$<br/>
+
+Lösning <br/>
+
+En sådan indeling ger gränspunkter $\frac{1}{5}, \frac{2}{5} , \frac{3}{5}, \frac{4}{5}, \frac{5}{5} $
+<div class="sideByside">
+<div class="casesSideLeft">
+
+\[
+\Phi_5(x)= \begin{cases} 
+	\frac{13}{5}, & \mbox{då } 0 \leq x \leq \frac{1}{5} \mbox{} \\
+	\frac{11}{5}, & \mbox{då } \frac{1}{5} < x \leq \frac{2}{5} \mbox{} \\	
+	\frac{9}{5}, & \mbox{då } \frac{2}{5} < x \leq \frac{3}{5}  \mbox{} \\	
+	\frac{7}{5}, &\mbox{då } \frac{3}{5} < x \leq \frac{4}{5} \mbox{} \\	
+	\frac{5}{5}, & \mbox{då } \frac{4}{5} < x \leq \frac{5}{5} \mbox{} \\	
+\end{cases}
+\]
+</div>
+
+<div class="casesSideRight">
+\[
+\Psi_5(x)= \begin{cases} 
+	\frac{15}{5}, & \mbox{då } 0 \leq x < \frac{1}{5} \\
+	\frac{13}{5}, & \mbox{då } \frac{1}{5} \leq x < \frac{2}{5}\\	
+	\frac{11}{5}, & \mbox{då } \frac{2}{5} \le x < \frac{3}{5}\\	
+	\frac{9}{5}, &\mbox{då } \frac{3}{5} \leq x < \frac{4}{5}\\	
+	\frac{7}{5}, & \mbox{då } \frac{4}{5} \leq x \leq \frac{5}{5}\\	
+\end{cases}
+\]
+</div>
+
+</div>
+\[ 
+\begin{split}
+ \int_0^1 \Phi_5(x)dx = \frac{13}{5}\Bigg(\frac{1 - 0}{5}\Bigg)+  
+ 					\frac{11}{5}\Bigg(\frac{2 - 1}{5}\Bigg)+ 
+ 					\frac{9}{5}\Bigg(\frac{3 - 2}{5}\Bigg)+ 
+ 					\frac{7}{5}\Bigg(\frac{4 - 3}{5}\Bigg)+ 
+ 					\frac{5}{5}\Bigg(\frac{5 - 4}{5}\Bigg) = \\
+ 					\frac{1}{5} \Bigg(\frac{13+11+9+7+5}{5}\Bigg)= \frac{9}{5} \\		
+\end{split}
+\]
+\[
+\begin{split}
+\int_0^1 \Psi_5(x)dx = \frac{15}{5}\Bigg(\frac{1 - 0}{5}\Bigg)+  
+ 					\frac{13}{5}\Bigg(\frac{2 - 1}{5}\Bigg)+ 
+ 					\frac{11}{5}\Bigg(\frac{3 - 2}{5}\Bigg)+ 
+ 					\frac{9}{5}\Bigg(\frac{4 - 3}{5}\Bigg)+ 
+ 					\frac{7}{5}\Bigg(\frac{5 - 4}{5}\Bigg) = \\
+ 					\frac{1}{5} \Bigg(\frac{15+13+11+9+7}{5}\Bigg)= \frac{11}{5} \\		
+\end{split}
+\]
+Notera att de båda ovan är aritmetiska summor och kan lösas med formeln för sådana.
+<br/>
+</p>
+<h2>uppgift 6.2 B</h2>
+<p>
+Samma som i uppgift a men dela in i 10 intervall <br/>
+Lösning <br/>
+
+En sådan indeling ger gränspunkter $\frac{1}{10}, \frac{2}{10} \ldots \frac{9}{10}, \frac{10}{10}$
+och alltså följande trappfunktioner
+<div class="sideByside">
+<div class="casesSideLeft">
+
+\[
+\Phi_{10} (x)= \begin{cases} 
+	3 - \Big(\frac{2}{10}\Big) & \mbox{då }  0 \leq x \leq \frac{1}{10}  \\
+	3 - \Big(\frac{4}{10}\Big) & \mbox{då } \frac{1}{10} < x \leq \frac{2}{10}  \\
+	\vdots \\
+	3 - \Big(\frac{20}{10}\Big) & \mbox{då } \frac{9}{10} < x \leq \frac{10}{10}  \\
+\end{cases}
+\]
+</div>
+<div class="casesSideRight">
+\[
+\Psi_{10}(x)= \begin{cases} 
+	3 - 0, & \mbox{då } 0 \leq x < \frac{1}{10}  \\
+	3 - \Big(\frac{2}{10}\Big) & \mbox{då } \frac{2}{10}  \leq x < \frac{2}{10}  \\
+	\vdots \\
+	3 - \Big(\frac{18}{10}\Big) & \mbox{då } \frac{9}{10}  \leq x \leq \frac{10}{10}  \\
+\end{cases}
+\]
+</div>
+</div>
+\[ 
+\begin{split}
+\int_0^1 \Phi_{10}(x)dx = \frac{1}{10}\Bigg(\frac{28}{10}\Bigg)+ \ldots  +
+ 					\frac{1}{10}\Bigg(\frac{10}{10}\Bigg)= 
+ 					\frac{1}{10} \Bigg(\frac{28 + \ldots + 10}{10}\Bigg)= \\
+ 					\mbox{/aritmetisk summa /} =  
+ 					10\left(\frac{1}{10} \left(\frac{10+28}{ 2*10}\right)\right)=\frac{19}{10}\\		
+\end{split}
+\]
+\[
+\begin{split} 
+ \int_0^1 \Psi_{10}(x)dx = \frac{1}{10}\Bigg(\frac{30}{10}\Bigg)+ \ldots + 
+ 					\frac{1}{10}\Bigg(\frac{12}{10}\Bigg)= 
+ 					\frac{1}{10} \Bigg(\frac{30 + \ldots + 12}{10}\Bigg)=\\ 
+ 					\mbox{/aritmetisk summa /} =  
+ 					10\bigg(\frac{1}{10} \bigg(\frac{30+ 12}{ 2*10}\bigg)\bigg)=\frac{21}{10}\\		
+\end{split}
+\]
+</p>
+<h2>uppgift 6.2 C</h2>
+<p>
+
+Samma som i uppgift b men dela in i n intervall
+Lösning <br/>
+
+En sådan indeling ger gränspunkter $\frac{1}{n}, \frac{2}{n} \ldots \frac{n-1}{n}, \frac{n}{n}$
+och alltså följande trappfunktioner
+<div class="sideByside">
+<div class="casesSideLeft">
+\[
+\Phi_{n} (x)= \begin{cases} 
+	3 - \Big(\frac{2}{n}\Big) & \mbox{då }  0 \leq x \leq \frac{1}{n}  \\
+	3 - \Big(\frac{4}{n}\Big) & \mbox{då } \frac{1}{n} < x \leq \frac{2}{n}  \\
+	\vdots \\
+	3 - 2 *\Big(\frac{n}{n}\Big) & \mbox{då } \frac{n-1}{n} < x \leq \frac{n}{n}  \\
+\end{cases}
+\]
+</div>
+<div class="casesSideRight">
+\[
+\Psi_{n}(x)= \begin{cases} 
+	3 - 0, & \mbox{då } 0 \leq x < \frac{1}{n}  \\
+	3 - \Big(\frac{2}{n}\Big) & \mbox{då } \frac{2}{n}  \leq x < \frac{2}{n}  \\
+	\vdots \\
+	3 - \Big(\frac{n-8}{n}\Big) & \mbox{då } \frac{n-1}{n}  \leq x \leq \frac{n}{n}  \\
+\end{cases}
+\]
+</div>
+</div>
+\[ 
+\begin{split}
+\int_0^1 \Phi_{n}(x)dx = \left(3- \frac{2}{n}\right)\left( \frac{1}{n} - 0\right)+ \ldots  +
+						\left(3- 2\right)\left( \frac{n}{n} - \frac{n-1}{n}\right)=\\						
+						\left(3- \frac{2}{n}\right)\left( \frac{1}{n}\right)+ \ldots  +
+						 \frac{1}{n}= \frac{1}{n}\left(3-\frac{2}{n}+\ldots+ 1 \right)=\\
+						 /\mbox{Aritmetisk summa}/=
+						  \frac{1}{n} \left(\frac{n \left(3- \frac{2}{n} +1\right) }{2}\right)=\\
+						 \left(\frac{3n - 2 + n}{2n}\right)= \frac{4n-2}{2n} = 2-\frac{1}{n}
+\end{split}
+\]
+
+\[
+\begin{split}
+\int_0^1 \Psi_{n}(x)dx = 3\left(\frac{1}{n}\right)+ \ldots  +
+						\left(3- \frac{2(n-1)}{n} \right) \left(\frac{1}{n}\right)=\\			
+						\frac{1}{n}\left(3 +\ldots + \frac{3n-2n+2}{n}\right)= 
+						\mbox{ /aritmetisk summa/ }= \\
+						\frac{1}{n} \left(n \left( 3 + \frac{n+2}{2n} \right)\right)= 
+						\frac{4n+2}{2n}=2+\frac{1}{n}
+						\end{split}
+\]
+</p>
+<h2>uppgift 6.2 D</h2>
+<p>
+Använd c) för att beräkna $ \int_0^1(3-2x)dx $
+\[
+	2-\frac{1}{n} \leq \int_0^1(3-2x)dx \leq 2 + \frac{1}{n}
+\]
+Om vi låter $n \rightarrow \infty $ ser vi 
+\[
+	2-\frac{1}{\infty} \leq \int_0^1(3-2x)dx \leq 2 + \frac{1}{\infty}
+\]
+Vi drar slutsatsen
+\[
+	\int_0^1(3-2x)dx = 2
+\]
+
+</p>
+
+
+</blockquote>
+</div>
+</body>
+</html>
