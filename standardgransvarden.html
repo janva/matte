@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Standardgränsvärden</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<!--Firefox gets into trouble if its MathJax.js is in different path (SOP)-->
+<script type="text/javascript" src="./MathJax.js"></script>
+
+<!--TODO separate out css to its own file -->
+<style>
+h1 {text-align:center}
+h2 {
+  font-weight: bold;
+  background-color: #DDDDDD;
+  padding: .2em .5em;
+  margin-top: 1.5em;
+  border-top: 3px solid #666666;
+  border-bottom: 2px solid #999999;
+}
+</style>
+</head>
+<body>	<h1>Gränsvärden</h1>
+		
+
+<h2>standardgränsvärden $(x \to 0)$ </h2>
+<p>
+\begin{align}
+\frac{\sin{x}}{x} &\to 1 \mbox { då } x \to 0\\
+\frac{\tan{x}}{x} &\to 1 \mbox { då } x \to 0\\
+\frac{\ln{1+x}}{x} &\to 1 \mbox { då } x \to 0\\
+\frac{e^x-1}{x} &\to 1 \mbox { då } x \to 0\\
+(1+x)^{\frac{1}{x}} &\to e \mbox { då } x \to 0\\
+(x)^{\alpha}\ln{x} &\to 0^{+} \mbox { då } x \to 0\\
+\end{align}
+</p>
+
+<h2> Standardgränsvärden arcus $(x \to 0)$</h2>
+<p>
+\begin{equation}
+	\frac{\arcsin{x}}{x} \to 1 \quad
+	\mbox {  och } \quad
+	\frac{\arctan{x}}{x} \to 1
+\end{equation}
+</p>
+<h2> Standardgränsvärden $(x \to \infty)$</h2>
+<p>
+\begin{align} 
+\frac{\ln{x}}{x^\alpha} &\to 0 \mbox{ då } x\to \infty  \mbox { och }\alpha > 0
+\\
+\frac{x^\alpha}{a^x} &\to 0 x\to \infty  \mbox { och } a>1
+\end{align}
+</p>
+
+<h2>standardgränsvärden $(n \to \infty)$ för heltal </h2>
+<p>
+\begin{equation} 
+ a^n \to  \left\{ 
+\begin{array}{l l}
+  0 & \quad \mbox{om} \mid a \mid < 1\\
+  1 & \quad \mbox{om a=1 }\\
+  \infty & \quad \mbox{om a > 1 }\\
+\end{array} \right. \\
+\end{equation}
+
+\begin{align}
+\frac{ln{n}}{n^{\alpha}}& \to 0 \mbox{ om konstanten } \alpha > 0 \\[0.5mm]	
+  \frac{n^\alpha}{a^n} &\to 0 \mbox{ om konstanten} a > 1  \\[0.5mm]
+  	
+  \frac{a^\alpha}{n!} &\to 0 \\[0.5mm]
+  	
+  \frac{n!}{n^n} &\to 0 \\[0.5mm]
+  
+  \sqrt[n]{n^\alpha}& \to 0 \mbox{ för varje } \alpha
+\end{align} 
+</p>
+
+</body>
