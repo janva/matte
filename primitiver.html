@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax Test Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script type="text/javascript" src="./MathJax.js"></script>
+
+<style>
+h1 {text-align:center}
+h2 {
+  font-weight: bold;
+  background-color: #DDDDDD;
+  padding: .2em .5em;
+  margin-top: 1.5em;
+  border-top: 3px solid #666666;
+  border-bottom: 2px solid #999999;
+}
+</style>
+</head>
+<body>
+
+<noscript>
+<div style="color:#CC0000; text-align:center">
+<b>Warning: <a href="http://www.mathjax.org/">MathJax</a>
+requires JavaScript to process the mathematics on this page.<br />
+If your browser supports JavaScript, be sure it is enabled.</b>
+</div>
+<hr>
+</noscript>
+
+<h1>Primitiva funktioner</h1>
+
+
+<h2>Definition</h2>
+Vi säger att <em>F</em> är en <em>primitiv funktion</em> till <em>f</em> på
+intervallet
+I om $F\prime(x)=f(x)$ för alla $x$ i intervallet <em>I</em>
+
+<h2>
+Standard primitiver
+</h2>
+<p>
+\begin{align}
+	\int&{a}dx  &=&ax+C \mbox{ då a är en konstant}\\ 
+	\int&{x^a}dx &=&\frac{x^{a+1}}{a+1}+C \mbox { då } a\neq -1\\ 
+	\int&{\frac{dx}{x}} &=&\ln{\mid x \mid}+C \\ 
+	\int&{e^xdx}  &=&e^x+C \\ 
+	\int&{\sin{x}dx}  &=& -cos{x}+C \\ 
+	\int&{\cos{x}dx}  &=&\sin{x}+C \\ 
+	\int&{\frac{dx}{\cos^2{x}}}  &=&\tan{x}+C \\ 
+	\int&{\frac{dx}{\sin^2{x}}}  &=&-\cot{x}+C \\ 
+	\int&{\frac{dx}{a^2+x^2}}  &=&\frac{1}{x}\arctan{f\frac{x}{a}}+C \\ 
+	\int&{\frac{dx}{\sqrt{a^2-x^2}}}  &=&\arcsin{f\frac{x}{a}}+C \\ 
+	\int&{\frac{dx}{\sqrt{a^2+x^2}}}  &=&\ln{\left|x +\sqrt{x^2 +a}\right|} + C
+\end{align}
+</p>
+<h2> Räkneregler</h2>
+<p>
+\begin{align} 
+	\int&{kf(x)dx}  &=&k\int{f(x)dx} \mbox{ då k } \neq 0 \mbox{ är en konstant}\\ 
+	\int&{f(x)+ g(x)dx}  &=&\int{f(x)dx}+ \int{g(x)dx} \\
+	\int&{\frac{f\prime(x)}{f(x)}dx}  &=&\ln{\left|f(x)\right|} + C\\ 
+	\int&{f\prime(x)f(x)dx}  &=&\frac{1}{2}\left(f(x)\right)^2 + c
+\end{align}
+</p>
+<h2>Partiell integration</h2>
+<p>
+<!--TODO italic -->
+Om  <em>F</em> är en primitiv funktion till f och om g är derivervbar,
+så är
+\begin{equation} 
+	\int{f(x)g(x)dx}= F(x)g(x)-\int{F(x)g'(x)dx} 
+\end{equation}
+
+<h2>Variabelbyte</h2>
+Om  <em>F</em> är en primitiv funktion till f och om g är derivervbar,
+så är}
+\begin{equation} 
+	\int{f(g(x))g\prime(x)dx}= F(g(x))+C
+\end{equation}
+för någon konstant C
+</p>
+
+<h2>Rationella uttryck</h2>
+<p>currently under construction</p>
+<!--
+\begin{center}
+  \begin{tabular}{| l | l | }
+    \hline
+    faktor i q & ger upphov till\\ \hline
+	\(x-a\)&\( \displaystyle \frac{A_1}{x-a}\) \\ 
+     \((x-a)^2\) &\( \displaystyle \frac{A_1}{x-a} +\frac{A_2}{(x-a)^2}\)  \\ 
+     \((x-a)^n\)& \(  \displaystyle \frac{A_1}{x-a} +\frac{A_2}{(x-a)^2}+\dots
+     +\frac{A_n}{(x-a)^n} \)  \\ 
+     \( x^2 +ax+b\) & \(\displaystyle \frac{A_1x+B_1}{x^2+ax+b}\)  \\
+     \(( x^2 +ax+b)^2\) &
+     \(\displaystyle \frac{A_1x+B_1}{x^2+ax+b}+\frac{A_2x+B_2}{(x^2+ax+b)^2}\)
+     \\ \(( x^2 +ax+b)^n\) &
+     \(\displaystyle \frac{A_1x+B_1}{x^2+ax+b}+\dots
+     +\frac{A_nx+B_n}{(x^2+ax+b)^n}\) \\
+     \hline
+  \end{tabular}
+\end{center}
+-->
+
+</body>
+</html>
