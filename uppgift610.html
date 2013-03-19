@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax Test Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+</script>
+<script type="text/javascript" src="./MathJax.js"></script>
+
+<style>
+h1 {text-align:center}
+h2 {
+  font-weight: bold;
+  background-color: #DDDDDD;
+  padding: .2em .5em;
+  margin-top: 1.5em;
+  border-top: 3px solid #666666;
+  border-bottom: 2px solid #999999;
+  
+}
+.sideByside{
+ margin:auto;
+ clear:both;
+width:75%;
+}
+
+.casesSideLeft{
+margin:auto;
+float:left;
+padding:10px;
+}
+.casesSideRight{
+margin:auto;
+float:left;
+padding:10px
+}
+#pagewrap
+{
+margin:auto;
+width:960px;
+}
+</style>
+</head>
+
+<body>
+<div id="pagewrap">
+<noscript>
+<div style="color:#CC0000; text-align:center">
+<b>Warning: <a href="http://www.mathjax.org/">MathJax</a>
+requires JavaScript to process the mathematics on this page.<br />
+If your browser supports JavaScript, be sure it is enabled.</b>
+</div>
+<hr>
+</noscript>
+
+<h1>Analys en variabel uppgift 6.10</h1>
+<h2>Uppgift 10 a
+</h2>
+<p>
+\[
+\begin{split}
+\int_0^1x\sqrt{1-x}dx= / t=1-x, x=1-t, dx=-dt, x=0 \Rightarrow t=1, x=1 \Rightarrow t= 0 / \\
+-\int_1^0(1-t)\sqrt{t}dt=\int_0^1(1-t)\sqrt{t}dt =\int_0^1\sqrt{t}-t\sqrt{t}dt=\int_0^1t^{\frac{1}{2}}-t^{\frac{3}{2}} =\\ 
+\left[\frac{2}{3}t^\frac{3}{2}-\frac{2}{5}t^\frac{5}{2} \right]_0^1= \frac{2}{3}-\frac{2}{5}=\\
+ \frac{4}{15}
+\end{split}
+\]
+</p>
+<h2>Uppgift 10 b
+</h2>
+<p>
+\[
+\begin{split}
+\int_1^e(\ln{x})^3dx= /partiell integration/= \left[x(\ln{x})^2\right]_1^e -\int_1^e \frac{3x(\ln{x})^2}{x}dx = e-3\int_1^e(\ln{x})^2dx =\\ e-\left(\left[3x(\ln{x})^2\right]_1^e -\int_1^e \frac{(3*2x(\ln{x})}{x}dx  \right)=
+e-3e\left(\left[6x(\ln{x}) \right]_1^e -\int_1^e \frac{6x}{x}dx \right)=\\
+e-3e+6e-[6x]_1^e=e-3e+6e-6e+6=\\
+6-2e
+\end{split}
+\]
+</p>
+
+<h2>Uppgift 10 c
+</h2>
+<p>
+\[
+\begin{split}
+\int_0^{\pi^3}(\cos{\sqrt[3]{x}})dx= /t=\sqrt[3]{x}, t^3=x,dx= 3t^2dt, t=\pi^3 \Rightarrow t=\pi, x=0 \Rightarrow t=0/=\\
+\int_0^{\pi}(\cos{t}*3t^2)dt=/P.I/=\left[\sin{t}*3t^2\right]_0^{\pi}-\int_0^{\pi}(\sin{t}*6t)dt=\\
+0-\left(\left[-\cos{t}*6t\right]_0^{\pi}- 6\int_0^{\pi}\cos{t}dt\right)= \left[\cos{t}*6t\right]_0^{\pi} +\left[6\sin{t}\right]_0^{\pi}=\\
+\cos{\pi}*6\pi +\cos{0}*6*0 +6*\sin{\pi}+6\sin{0}=\\
+-6\pi + 0+ 0 -0=\\
+-6\pi 
+\end{split}
+\]
+</p>
+</body>
+</html>
